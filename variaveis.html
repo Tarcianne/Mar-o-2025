@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrada de Dados</title>
+</head>
+<body>
+
+    <h1>Informações do Usuário</h1>
+
+    <label for="nome">Nome: </label>
+    <input type="text" id="nome" placeholder="Digite seu nome"><br><br>
+
+    <label for="dataNascimento">Data de Nascimento: </label>
+    <input type="date" id="dataNascimento"><br><br>
+
+    <label for="cidade">Cidade: </label>
+    <input type="text" id="cidade" placeholder="Digite sua cidade"><br><br>
+
+    <button onclick="atribuirValores()">Enviar</button>
+
+    <h2>Dados Informados:</h2>
+    <p id="resultado"></p>
+
+    <script>
+        function atribuirValores() {
+            // Atribui valores informados pelo usuário às variáveis
+            const nome = document.getElementById('nome').value;
+            const dataNascimento = document.getElementById('dataNascimento').value;
+            const cidade = document.getElementById('cidade').value;
+
+            // Exibe os dados informados pelo usuário
+            const resultado = `Nome: ${nome}<br>Data de Nascimento: ${dataNascimento}<br>Cidade: ${cidade}`;
+            document.getElementById('resultado').innerHTML = resultado;
+        }
+    </script>
+
+</body>
+</html>
