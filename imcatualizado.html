@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo I.M.C</title>
+    <link rel="stylesheet" href="imcatualizado.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cálculo I.M.C</h1>
+        </header>
+
+        <section class="resumo">
+            <h2>O que é o I.M.C?</h2>
+            <p>
+                O Índice de Massa Corporal (IMC) é uma medida que compara o peso com a altura de uma pessoa, sendo utilizado para avaliar se ela está dentro de um padrão de peso saudável. Ele pode ser calculado a partir da fórmula:
+            </p>
+            <p><strong>IMC = Peso (kg) / (Altura (m) * Altura (m))</strong></p>
+            <p>Com base no IMC calculado, é possível identificar em qual faixa de peso a pessoa se encontra:</p>
+            <ul>
+                <li>Abaixo do peso: IMC abaixo de 18,5</li>
+                <li>Peso normal: IMC entre 18,5 e 24,9</li>
+                <li>Sobrepeso: IMC entre 25 e 29,9</li>
+                <li>Obesidade: IMC acima de 30</li>
+            </ul>
+        </section>
+
+        <section class="formulario">
+            <h2>Preencha os dados abaixo</h2>
+            <div class="campo">
+                <label for="altura">Altura (m):</label>
+                <input type="number" id="altura" step="0.01" placeholder="Ex: 1.75">
+            </div>
+            <div class="campo">
+                <label for="peso">Peso (kg):</label>
+                <input type="number" id="peso" placeholder="Ex: 70">
+            </div>
+
+            <div class="resultado">
+                <h3>Seu IMC:</h3>
+                <p id="imcResult">-</p>
+                <h3>Classificação:</h3>
+                <p id="classificacaoResult">-</p>
+            </div>
+
+            <button onclick="calcularIMC()">Calcular IMC</button>
+        </section>
+
+        <!-- Gato interativo -->
+        <div id="gato" onclick="mostrarMensagem()" title="Clique aqui para uma mensagem do gatinho!">
+            🐾
+        </div>
+
+        <!-- Mensagem do gatinho -->
+        <div id="mensagem" class="mensagem">
+            <p id="mensagemTexto"></p>
+        </div>
+    </div>
+
+    <script src="imcatualizado.js"></script>
+</body>
+</html>
